@@ -4,11 +4,13 @@ var animData = {
        renderer: 'svg',
        autoplay: false,
        loop: false,
-       path : 'data3.json'
+       path : 'data4.json'
    };
    var anim = bodymovin.loadAnimation(animData);
+setTimeout(function(){
+  anim.playSegments([0,50],true); 
+  container.addEventListener('click', firstLoop); }, 2000);
 
-   container.addEventListener('click', firstLoop);
 
    function firstLoop(){
    anim.playSegments([0,50],true);
@@ -28,12 +30,16 @@ function thirdLoop() {
       container.addEventListener('click', fourthLoop);
 };
 function fourthLoop(){
-  anim.playSegments([180,331], true);
+  anim.playSegments([180,275], true);
   this.removeEventListener('click', fourthLoop);
     container.addEventListener('click', fifthLoop);
 };
 function fifthLoop(){
-  anim.playSegments([331,430], true);
+  anim.playSegments([275,390], true);
   this.removeEventListener('click', fifthLoop);
   container.addEventListener('click', firstLoop);
 };
+anim.addEventListener('DOMLoaded',startAnimation);
+function startAnimation(){
+       anim.playSegments([[0,50],[50,151]],true);
+   }
