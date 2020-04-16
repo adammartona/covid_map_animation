@@ -4,12 +4,11 @@ var animData = {
        renderer: 'svg',
        autoplay: false,
        loop: false,
-       path : 'data4.json'
+       path : 'data5.json'
    };
    var anim = bodymovin.loadAnimation(animData);
-setTimeout(function(){
-  anim.playSegments([0,50],true); 
-  container.addEventListener('click', firstLoop); }, 2000);
+
+  container.addEventListener('click', firstLoop);
 
 
    function firstLoop(){
