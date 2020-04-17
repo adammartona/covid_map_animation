@@ -1,18 +1,18 @@
+
 var container = document.getElementById('animContainer');
 var animData = {
        container: container,
        renderer: 'svg',
        autoplay: false,
        loop: false,
-       path : 'data5.json'
+       path : 'data6.json'
    };
    var anim = bodymovin.loadAnimation(animData);
 
-  container.addEventListener('click', firstLoop);
-
+   container.addEventListener('click',firstLoop);
 
    function firstLoop(){
-   anim.playSegments([0,50],true);
+   anim.playSegments([0,50], true);
    this.removeEventListener('click', firstLoop);
    container.addEventListener('click', secondLoop);
    };
@@ -29,16 +29,12 @@ function thirdLoop() {
       container.addEventListener('click', fourthLoop);
 };
 function fourthLoop(){
-  anim.playSegments([180,275], true);
+  anim.playSegments([180,395], true);
   this.removeEventListener('click', fourthLoop);
     container.addEventListener('click', fifthLoop);
 };
 function fifthLoop(){
-  anim.playSegments([275,390], true);
+  anim.playSegments([395,540], true);
   this.removeEventListener('click', fifthLoop);
-  container.addEventListener('click', firstLoop);
+  setTimeout(firstLoop, 4000);
 };
-anim.addEventListener('DOMLoaded',startAnimation);
-function startAnimation(){
-       anim.playSegments([[0,50],[50,151]],true);
-   }
