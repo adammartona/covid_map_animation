@@ -36,5 +36,5 @@ function fourthLoop(){
 function fifthLoop(){
   anim.playSegments([395,540], true);
   this.removeEventListener('click', fifthLoop);
-  setTimeout(firstLoop, 4000);
+   container.addEventListener('click',firstLoop);
 };
