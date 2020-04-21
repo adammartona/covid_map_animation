@@ -5,7 +5,7 @@ var animData = {
        renderer: 'svg',
        autoplay: false,
        loop: false,
-       path : 'data6.json'
+       path : 'data9.json'
    };
    var anim = bodymovin.loadAnimation(animData);
 
@@ -36,5 +36,5 @@ function fourthLoop(){
 function fifthLoop(){
   anim.playSegments([395,540], true);
   this.removeEventListener('click', fifthLoop);
-           container.addEventListener('click', firstLoop);
+  setTimeout(firstLoop, 4000);
 };

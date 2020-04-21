@@ -1,8 +1,28 @@
 
 html,
 body {
+  background-color: #000;
   width: 100%;
   height: 100%;
   margin: 0;
+  overflow: hidden;
   justify-content: center;
+}
+
+div#deliveryAnimation {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  left:50%;
+  top:50%;
+
+}
+
+
+g {
+}
+
+svg {
+    width: 160%!important;
 }
