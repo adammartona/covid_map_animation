@@ -5,7 +5,7 @@ var animData = {
        renderer: 'svg',
        autoplay: false,
        loop: false,
-       path : 'data9.json'
+       path : 'data11.json'
    };
    var anim = bodymovin.loadAnimation(animData);
 
